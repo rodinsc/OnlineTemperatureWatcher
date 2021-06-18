@@ -17,6 +17,7 @@ Things that you have to be careful about when modifying the code are below.
 - Dont forget to change the URL in index.html to your server IP address/domain.
 - Dont forget to change the host URL in Arduino code to your server IP address/domain.
 - You cant establish a TLS (SSL) connection with this code.
+- If you have changed the post URL in the server code, dont forget to change it in the Arduino code too.
 
 ## Starting the server
 
