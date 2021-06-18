@@ -25,7 +25,7 @@ Dont forget to install required npm modules before starting the server. You can 
 
 ## Live Demo
 
-Live demo is [here](http://rodinsc.com/temperature "here").
+Live demo is [here](http://temperaturewatcher.com "here").
 
 ## Scheme
 
