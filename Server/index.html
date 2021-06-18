@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Temperature Watcher</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="center">
+        <p id="info"></p>
+        <br>
+        <p id="date"></p>
+    </div>
+    
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('URL');
+        socket.on('connect', function (data) {
+            socket.emit('join', 'Client message.');
+        });
+        socket.on('update', function (data) {
+            document.getElementById("info").innerText = `Current temperature: ${data.temp} °C`;
+            document.getElementById("date").innerText = `Last update: ${data.date}`;
+        });
+    </script>
+</body>
+
+</html>
