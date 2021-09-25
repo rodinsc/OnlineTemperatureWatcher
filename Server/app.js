@@ -20,7 +20,7 @@ app.get('/temperature', function(req, res) {
 
 app.post('/temperature', urlencodedParser, function(req, res){
     var today = new Date();
-    lastUpdate = `${today.getDate()}.${today.getMonth()}.${today.getFullYear()} - ${("0" + today.getHours()).slice(-2)}:${("0" + today.getMinutes()).slice(-2)}:${("0" + today.getSeconds()).slice(-2)}`;
+    lastUpdate = `${today.getDate()}.${today.getMonth()+1}.${today.getFullYear()} - ${("0" + today.getHours()).slice(-2)}:${("0" + today.getMinutes()).slice(-2)}:${("0" + today.getSeconds()).slice(-2)}`;
     lastRecordedTemperature = req.body.temp;
     io.sockets.emit('update', {temp: req.body.temp, date: lastUpdate});
     res.end("Success.");
