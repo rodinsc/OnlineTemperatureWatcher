@@ -2,8 +2,6 @@
 
 Online Temperature Watcher is an example of online data transmission between an Arduino and an Express.js Web Server. It is using an Ethernet Card with ENC28J60 chip, and DHT11 to get temperature data. You can modify the code to watch another data with another sensors.
 
-Live demo website is at the end of the document.
-
 ## Watching the data
 
 The Arduino makes POST request to server every 30 seconds, and server updates the data to received data via socket.io so you dont need to refresh the page.
@@ -22,10 +20,6 @@ Things that you have to be careful about when modifying the code are below.
 ## Starting the server
 
 Dont forget to install required npm modules before starting the server. You can run the `npm i` command.
-
-## Live Demo
-
-Live demo is [here](http://temperaturewatcher.com "here").
 
 ## Scheme
 
